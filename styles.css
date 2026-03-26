@@ -847,7 +847,8 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 .author-name.no-link { color: var(--text); cursor: default; }
 .author-name.no-link:hover { opacity: 1; }
 .author-name sup { font-size: 0.65em; margin-left: 1px; }
-.author-affil { font-size: 0.85em; color: var(--text-secondary); }
+.author-affil { font-size: 1em; color: var(--text-secondary); }
+.authors-grid + div { margin-top: 18px; }
 .affil-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-top: var(--author-affil-gap, 8px); }
 .affil-legend-item { font-size: 0.85em; color: var(--text-secondary); }
 .affil-legend-item sup { font-size: 0.7em; margin-right: 2px; font-weight: 600; }
