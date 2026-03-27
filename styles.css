@@ -931,6 +931,7 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
   padding-left: clamp(20px, 3vw, 28px);
   padding-right: clamp(20px, 3vw, 28px);
   --qualitative-media-height: clamp(180px, 23vw, 320px);
+  --qualitative-comparison-scale: 0.7;
   --qualitative-image-ratio: 1.338842975;
 }
 .qualitative-results-section .image-grid {
@@ -951,11 +952,15 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
   flex-direction: column;
   gap: 22px;
   margin-top: 36px;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .qualitative-comparison-header,
 .qualitative-comparison-row {
   display: grid;
-  grid-template-columns: calc(var(--qualitative-media-height) * var(--qualitative-image-ratio)) repeat(2, var(--qualitative-media-height));
+  grid-template-columns: calc(var(--qualitative-media-height) * var(--qualitative-comparison-scale) * var(--qualitative-image-ratio)) repeat(2, calc(var(--qualitative-media-height) * var(--qualitative-comparison-scale)));
   gap: 18px;
   align-items: start;
   justify-content: center;
@@ -979,7 +984,7 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 .qualitative-comparison-video video {
   width: 100%;
   display: block;
-  height: var(--qualitative-media-height);
+  height: calc(var(--qualitative-media-height) * var(--qualitative-comparison-scale));
   border-radius: var(--media-radius, 10px);
 }
 .qualitative-comparison-image img {
