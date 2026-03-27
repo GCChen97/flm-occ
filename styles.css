@@ -926,6 +926,75 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 .image-grid .media-image img { aspect-ratio: 4 / 3; object-fit: cover; }
 .image-grid .media-frame { aspect-ratio: 4 / 3; }
 .image-grid .media-frame img { aspect-ratio: unset; }
+.qualitative-results-section .content-container {
+  max-width: min(1280px, calc(var(--max-width, 1040px) + 160px));
+  padding-left: clamp(20px, 3vw, 28px);
+  padding-right: clamp(20px, 3vw, 28px);
+}
+.qualitative-results-section .image-grid {
+  justify-items: center;
+}
+.qualitative-results-section .grid-cell,
+.qualitative-results-section .media-figure {
+  width: 100%;
+}
+.qualitative-results-section .image-grid .media-image img {
+  aspect-ratio: auto;
+  object-fit: contain;
+  height: auto;
+  margin: 0 auto;
+}
+.qualitative-comparison-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-top: 36px;
+}
+.qualitative-comparison-header,
+.qualitative-comparison-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+.qualitative-comparison-heading {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-align: center;
+}
+.qualitative-comparison-row + .qualitative-comparison-row {
+  padding-top: 4px;
+}
+.qualitative-comparison-media {
+  width: 100%;
+  min-width: 0;
+}
+.qualitative-comparison-image img,
+.qualitative-comparison-video video {
+  width: 100%;
+  display: block;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--media-radius, 10px);
+}
+.qualitative-comparison-image img {
+  object-fit: contain;
+  background: var(--surface, #f5f5f5);
+}
+.qualitative-comparison-video video {
+  object-fit: contain;
+  background: transparent;
+}
+.qualitative-comparison-media .media-caption {
+  margin-top: 9px;
+  font-style: normal;
+}
+.qualitative-comparison-image .media-caption {
+  font-family: var(--font-mono);
+  font-size: 0.78em;
+}
 .grid-cell { position: relative; transition: outline 0.1s, opacity 0.15s; border-radius: 6px; }
 .grid-cell.dragging { opacity: 0.4; }
 .grid-cell.drop-hover { outline: rgb(34, 197, 94) dashed 3px; outline-offset: -3px; background: rgba(34, 197, 94, 0.08); border-radius: 6px; }
@@ -1371,6 +1440,22 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 @media (max-width: 768px) {
   .preview-outer { font-size: calc(var(--font-size, 16px) * .95) !important; }
   .content-container { padding-left: 20px !important; padding-right: 20px !important; }
+  .qualitative-results-section .content-container {
+    max-width: 100%;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .qualitative-comparison-list {
+    gap: 18px;
+    margin-top: 28px;
+  }
+  .qualitative-comparison-header,
+  .qualitative-comparison-row {
+    gap: 12px;
+  }
+  .qualitative-comparison-heading {
+    font-size: 0.72rem;
+  }
   .sec-hero { padding-left: 20px; padding-right: 20px; }
   .hero-title { letter-spacing: -0.01em; font-size: clamp(1.5rem, 5vw, 2.4rem) !important; line-height: 1.25 !important; }
   .hero-subtitle { max-width: 100%; line-height: 1.55; font-size: clamp(0.9rem, 2.5vw, 1.15rem) !important; }
@@ -1428,6 +1513,20 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 @media (max-width: 480px) {
   .preview-outer { font-size: calc(var(--font-size, 16px) * .9) !important; }
   .content-container { padding-left: 12px !important; padding-right: 12px !important; }
+  .qualitative-results-section .content-container {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+  .qualitative-comparison-header {
+    display: none;
+  }
+  .qualitative-comparison-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .qualitative-comparison-media .media-caption {
+    text-align: left;
+  }
   .sec-hero { padding: 32px 12px 24px !important; }
   .hero-title { letter-spacing: -0.01em; font-size: clamp(1.3rem, 6vw, 1.8rem) !important; line-height: 1.3 !important; }
   .hero-subtitle { font-size: 0.85rem !important; line-height: 1.5; }
