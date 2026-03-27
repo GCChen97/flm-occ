@@ -930,12 +930,14 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
   max-width: min(1280px, calc(var(--max-width, 1040px) + 160px));
   padding-left: clamp(20px, 3vw, 28px);
   padding-right: clamp(20px, 3vw, 28px);
+  --qualitative-media-height: clamp(180px, 23vw, 320px);
+  --qualitative-image-ratio: 1.338842975;
 }
 .qualitative-results-section .image-grid {
   justify-items: center;
 }
 .qualitative-results-section .grid-cell,
-.qualitative-results-section .media-figure {
+.qualitative-results-section .image-grid .media-figure {
   width: 100%;
 }
 .qualitative-results-section .image-grid .media-image img {
@@ -953,9 +955,10 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 .qualitative-comparison-header,
 .qualitative-comparison-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: calc(var(--qualitative-media-height) * var(--qualitative-image-ratio)) repeat(2, var(--qualitative-media-height));
   gap: 18px;
   align-items: start;
+  justify-content: center;
 }
 .qualitative-comparison-heading {
   font-size: 0.78rem;
@@ -976,7 +979,7 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 .qualitative-comparison-video video {
   width: 100%;
   display: block;
-  aspect-ratio: 1 / 1;
+  height: var(--qualitative-media-height);
   border-radius: var(--media-radius, 10px);
 }
 .qualitative-comparison-image img {
@@ -1444,6 +1447,7 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
     max-width: 100%;
     padding-left: 16px !important;
     padding-right: 16px !important;
+    --qualitative-media-height: clamp(150px, 24vw, 220px);
   }
   .qualitative-comparison-list {
     gap: 18px;
@@ -1523,6 +1527,10 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
   .qualitative-comparison-row {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+  .qualitative-comparison-image img,
+  .qualitative-comparison-video video {
+    height: auto;
   }
   .qualitative-comparison-media .media-caption {
     text-align: left;
