@@ -968,10 +968,10 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
   justify-content: center;
 }
 .qualitative-comparison-heading {
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.08em;
-  text-transform: uppercase;
+  text-transform: none;
   color: var(--text-secondary);
   text-align: center;
 }
