@@ -1087,6 +1087,8 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 .results-table.table-style-boxed { border: 1px solid var(--table-border, #e2e8f0); border-radius: 14px; overflow: hidden; }
 .results-table.table-style-boxed th, .results-table.table-style-boxed td { border-right: 1px solid color-mix(in srgb,var(--table-border, #e2e8f0) 72%,white); }
 .results-table.table-style-boxed th:last-child, .results-table.table-style-boxed td:last-child { border-right: none; }
+.quantitative-description { margin-top: 18px; color: var(--text-secondary); font-size: 1em; line-height: var(--body-line-height, 1.75); text-align: left; }
+.quantitative-description p { margin: 0px; }
 .charts-grid { display: grid; gap: 18px; align-items: start; }
 .chart-wrapper { overflow-x: auto; background: var(--chart-surface, var(--surface, #f8fafc)); border: 1px solid color-mix(in srgb,var(--border-color, #e2e8f0) 88%,white); border-radius: calc(var(--radius, 12px) + 4px); padding: 18px 18px 14px; box-shadow: rgba(15, 23, 42, 0.04) 0px 8px 20px; }
 .chart-wrapper.legend-right { display: grid; grid-template-columns: minmax(0px, 1fr) auto; gap: 18px; align-items: start; }
