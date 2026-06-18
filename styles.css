@@ -814,7 +814,7 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 [data-hero="split"] .sec-hero { background: linear-gradient(135deg,var(--hero-grad-from, #f9f9ff) 50%,var(--hero-grad-to, #fff) 50%); }
 [data-hero="pattern"] .sec-hero { background-position-x: ; background-position-y: ; background-repeat: ; background-attachment: ; background-origin: ; background-clip: ; background-color: ; background-image: radial-gradient(var(--border-color, #ddd) 1px,transparent 1px); background-size: 20px 20px; }
 .hero-venue { margin-bottom: 16px; }
-.venue-badge { display: inline-block; font-size: 13px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-secondary); padding: 5px 16px; border-radius: 100px; }
+.venue-badge { display: inline-block; font-size: 20px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-secondary); padding: 6px 18px; border-radius: 100px; }
 .hero-title { font-family: var(--font-heading); font-size: var(--hero-title-size, 3rem); font-weight: 700; line-height: 1.2; color: var(--text); margin-bottom: 16px; letter-spacing: -0.02em; }
 .hero-title-line { display: block; }
 .hero-title-line-highlight, .hero-title-accent { color: var(--hero-highlight, var(--accent, var(--primary))); }
@@ -849,9 +849,11 @@ body { font-family: Inter, system-ui, -apple-system, sans-serif; color: var(--ap
 .author-name sup { font-size: 0.65em; margin-left: 1px; }
 .author-affil { font-size: 1em; color: var(--text-secondary); }
 .authors-grid + div { margin-top: 18px; }
-.affil-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 18px; margin-top: var(--author-affil-gap, 8px); }
+.affil-legend { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; margin-top: var(--author-affil-gap, 8px); }
 .affil-legend-item { font-size: 0.85em; color: var(--text-secondary); }
 .affil-legend-item sup { font-size: 0.7em; margin-right: 2px; font-weight: 600; }
+.author-note { margin-top: 6px; font-size: 0.82em; color: var(--text-secondary); }
+.author-note sup { font-size: 0.7em; margin-right: 2px; font-weight: 600; }
 .equal-note { font-size: 0.8em; color: var(--text-secondary); margin-top: 8px; font-style: italic; }
 .sec-links { padding-top: var(--sec-pt, 8px); padding-bottom: var(--sec-pb, 32px); padding-left: var(--content-px, 40px); padding-right: var(--content-px, 40px); }
 .links-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
