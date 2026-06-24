@@ -1,9 +1,9 @@
 
-# Feed-forward Likelihood Maximization for Efficient Gaussian-based Monocular Occupancy Prediction [ECCV 2026]
+# Feed-forward Likelihood Maximization for Gaussian-based Occupancy Prediction [ECCV 2026]
 
-- Feed-forward Likelihood Maximization for Occupancy Prediction (FLM-Occ) learns to iteratively maximize the Gaussian likelihood over the voxel distribution.
-- This method largely simplify the implementation of Gaussian-based occupancy prediction, and achieves state-of-the-art performance on the ScanNet-Occ dataset with significantly reduced computational cost.
-- The superquadric-based implementation further improves the efficiency and accuracy of occupancy prediction.
+- Feed-forward Likelihood Maximization for Occupancy Prediction (FLM-Occ) learns to iteratively maximize the Gaussian likelihood over the voxel distribution (test-time unrolled optimization).
+- This method largely simplifies the implementation of Gaussian-based occupancy prediction, and achieves state-of-the-art performance on the ScanNet-Occ dataset with significantly reduced computational cost.
+- The superquadric-based implementation further improves the efficiency and accuracy.
 
 > [arXiv](https://arxiv.org/abs/2606.21373v1) | [Project Page](https://gcchen97.github.io/flm-occ/)
 
