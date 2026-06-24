@@ -63,7 +63,7 @@ Thanks for their contributions to the research community!
 
 ## Reference
 ```
-@inproceedings{gcchen2024pisr,
+@inproceedings{gcchen2026flmocc,
   title={FLM-Occ: Feed-forward Likelihood Maximization for Efficient Indoor Occupancy Prediction},
   author={Guangcheng, Chen and Lihuang, Fang and Huaqi, Tao and Yicheng, He and Li, He and Hong, Zhang},
   booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
