@@ -8,7 +8,7 @@
 - The superquadric-based implementation further improves the efficiency and accuracy.
 
 <div align="center">
-  <img src="assets/intro.svg" style="zoom: 160%;" />
+  <img src="assets/intro.svg" style="zoom: 180%;" />
 </div>
 
 
@@ -22,6 +22,7 @@ pip3 install lightning rotary_embedding_torch
 # optional libs for logging
 pip3 install tensorboard swanlab
 ```
+Download the Depth Anything V2 (DAv2) model weights from [Depth Anything V2](https://github.com/DepthAnything/Depth-Anything-V2) or the finetuned DAv2 weight from [EmbodiedOcc](https://huggingface.co/YkiWu/EmbodiedOcc).
 
 
 ## Dataset Preparation
@@ -41,11 +42,12 @@ pip3 install tensorboard swanlab
 
 
 ## Training
-1. Modify the dataset path and depth anything v2 path in `configs/scannet.py` before training.
+1. Modify the `dir_dataset` and `path_dav2` in `configs/scannet.py` before training.
 2. Modify the imported config file in `train.py` if you want to use a different config.
 ```bash
 python train.py
 ```
+Setting batch size to 32 on a single GPU requires ~40GB VRAM.
 
 
 ## TODO List

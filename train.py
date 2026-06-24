@@ -21,16 +21,15 @@ dir_bakcup = str(Path(__file__).parent)
 
 from model.flm_occ import FLMOcc
 from model import SQMM
-
+from utils.training import \
+    create_lr_scheduler, seed_everything, backup_codes, get_total_norm, check_grad_nan_inf
+from utils.metrics import \
+    pre_recall_f1score_iou, stat_pre_recall_f1score_iou, MeanIoUAcc, generate_eval_tables
+    
 from datasets_.scannet import ScannetDataset as UsedDataset
 import configs.scannet as UsedConfig
 DC, MC, TC = UsedConfig.Dataset, UsedConfig.Model, UsedConfig.Train
 
-from utils.training import (
-    create_lr_scheduler, seed_everything, backup_codes, get_total_norm, check_grad_nan_inf
-)
-from utils.metrics import pre_recall_f1score_iou, stat_pre_recall_f1score_iou, MeanIoUAcc, generate_eval_tables
-    
 if TC.use_swanlab:
     import swanlab
 
