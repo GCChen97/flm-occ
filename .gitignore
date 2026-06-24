@@ -1,0 +1,8 @@
+
+/__pycache__/
+/output/
+/tmp/
+tmp.*
+*.pyc
+exp/
+*.log
